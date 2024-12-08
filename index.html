@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NavGurukul</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        /* Full page video background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* To avoid scrolling */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .video-background {
+            position: absolute; /* Position the video */
+            top: 0;
+            left: 0;
+            width: 100%; /* Make video fill the entire width */
+            height: 100%; /* Make video fill the entire height */
+            object-fit: cover; /* Ensure the video covers the screen without distortion */
+            z-index: -1; /* Place the video behind the content */
+        }
+
+        /* Container for text content */
+        .content {
+            position: relative; /* To place text on top of the video */
+            z-index: 1; /* Make sure text appears on top of the video */
+            color: white; /* Text color */
+            text-align: center;
+            padding: 10% 20%; /* Adjust padding */
+        }
+
+        /* Text Styling */
+        .content h1 {
+            font-size: 4.5em; /* Larger font size */
+            font-weight: bold;
+            text-transform: uppercase; /* Uppercase letters */
+            letter-spacing: 5px; /* Add space between letters */
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out forwards, scaleUp 1s ease-in-out 1.5s;
+        }
+
+        .content p {
+            margin: auto;
+            word-spacing: 5px;
+            width: 80%;
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards, scaleUp 1s ease-in-out 1.5s;
+        }
+
+        /* Button Styling */
+        .content button {
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards, scaleUp 1s ease-in-out 1.5s;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for button */
+        .content button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Shadow Pulse effect for title */
+        @keyframes shadowPulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+        }
+        nav a img {
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Video Background -->
+<video class="video-background" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2020/07/30/45954-447087574_large.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <a class="navbar-brand text-white" href="#"><img src="1400w_x2400h__q_90_c_Navgurukul-removebg-preview.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="about.html">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content over the video -->
+<div class="content">
+    <h1>Welcome to NavGurukul</h1>
+    <p>NavGurukul is a non-profit organization that provides free, high-quality coding education to underprivileged individuals, empowering them to build successful careers in technology. Our mission is to break barriers and offer equal opportunities, especially to women and marginalized communities.</p>
+    <button>Learn More</button>
+</div>
+
+</body>
+</html>
